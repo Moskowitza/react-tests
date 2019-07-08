@@ -75,3 +75,9 @@ To make a test we need to do the following:
   })
   ```
 - You can now test an assertion with your new text `expect(onSubmit).toHaveBeenCalledWith({text:"hello"})`
+
+## Errors
+
+you can spy on exected errors, just like any other function call
+`console.error=jest.fn();`
+`expect(console.error).toBeCalled()`
