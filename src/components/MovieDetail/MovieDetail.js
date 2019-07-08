@@ -35,12 +35,12 @@ class MovieDetail extends Component {
       <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
         <MovieInfo>
           <Overdrive id={`${movie.id}`}>
-            <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
+            <Poster src={`${POSTER_PATH}/${movie.poster_path}`} alt={movie.title} data-testid="movie-poster" />
           </Overdrive>
           <div>
             <h1 data-testid="movie-title">{movie.title}</h1>
-            <h3>{movie.release_date}</h3>
-            <p>{movie.overview}</p>
+            <h3 data-testid="movie-release_date">{movie.release_date}</h3>
+            <p data-testid="movie-overview">{movie.overview}</p>
           </div>
         </MovieInfo>
       </MovieWrapper>

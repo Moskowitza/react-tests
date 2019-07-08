@@ -102,3 +102,26 @@ When we pass info to a component we should check that the information is recieve
 ```
 expect(getByTestId('movie-link').getAttribute('href')).toBe(`/${movie.id}`)
 ```
+
+## Fetching async Data
+
+- `import { waitForElement } from '@testing-library/react';`
+- use `jest-fetch-mock` to handle json formatted data
+- make your test call back `async`
+- await your waitForElement
+
+## Getting all the data
+
+- Mock fake data of the same form you're passing in to your mapping component.
+- Try a method like `getAllByTestId` off of the render to get ALL of something. You can then check the length toBe a number.
+- I guess this works out
+
+```
+const [movieLink, movieImg]= await waitForElement(()=>
+        [getAllByTestId('movie-link'),
+         getAllByTestId('movie-img')]
+        )
+        expect(queryByTestId("loading")).toBeFalsy()
+        expect(movieLink[0].getAttribute('href')).toBe(`/${movies.results[0].id}`)
+        expect(movieImg[0].src).toBe(`${POSTER_PATH}/${movies.results[0].poster_path}`)
+```

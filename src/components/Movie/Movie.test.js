@@ -30,6 +30,6 @@ test('<Movie /> with movie',()=>{
  
     expect(console.error).not.toHaveBeenCalled()
     expect(getByTestId('movie-link').getAttribute('href')).toBe(`/${movie.id}`)
-    expect(getByTestId('movie-img').src).toBe(`${POSTER_PATH}${movie.id}`)
+    expect(getByTestId('movie-img').src).toBe(`${POSTER_PATH}/${movie.poster_path}`)
 
 })

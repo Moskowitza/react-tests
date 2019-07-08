@@ -11,7 +11,7 @@ const Movie = ({ movie }) => {
   return (
     <Link to={`/${movie.id}`} data-testid="movie-link">
       <Overdrive id={`${movie.id}`}>
-        <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} data-testid="movie-img"/>
+        <Poster src={`${POSTER_PATH}/${movie.poster_path}`} alt={movie.title} data-testid="movie-img"/>
       </Overdrive>
     </Link>
   );
