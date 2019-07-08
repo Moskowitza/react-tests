@@ -9,5 +9,4 @@ test('<Incrementor />',()=>{
     expect(getByTestId('incrementor-button').tagName).toBe("BUTTON");
     // Assert incrementor starts at 0
     expect(getByTestId('incrementor-button').textContent).toBe("0");
-
 });
