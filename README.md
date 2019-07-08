@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - jest comes with CRA, and scans the folder looking for test.js files
 
 - testing done with `npm i --save-dev @testing-library/react jest-dom`
-
+- we will also be using `npm i --save-dev jest-fetch-mock`
 - React-Testing-Library fully renders child components, unlike enzyme which "shallow renders".
 
 ### Counter & Incrementor
