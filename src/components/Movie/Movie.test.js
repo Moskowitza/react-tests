@@ -1,0 +1,32 @@
+import React from 'react';
+import { render, cleanup } from '@testing-library/react';
+import Movie from './Movie.js';
+import {MemoryRouter} from 'react-router-dom';
+
+afterEach(()=>{
+    cleanup();
+    console.error.mockClear()
+})
+
+console.error=jest.fn();
+
+const movie={
+    id:'1',
+    title: "A Clockwork Orange",
+    poster_path:"aclockworkorange.jpg"        
+}
+
+test('<Movie>',()=>{
+    render(<Movie/>);
+    expect(console.error).toHaveBeenCalledTimes(1)
+})
+test('<Movie /> with movie',()=>{
+    
+    render(
+        <MemoryRouter>
+            <Movie movie={movie}/>
+        </MemoryRouter>
+        );
+
+    expect(console.error).not.toHaveBeenCalled()
+})

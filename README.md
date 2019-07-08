@@ -81,3 +81,14 @@ To make a test we need to do the following:
 you can spy on exected errors, just like any other function call
 `console.error=jest.fn();`
 `expect(console.error).toBeCalled()`
+
+## Reset Spies
+
+If multiple tests are called in one test file, we can reset our mocks using the afterEach method
+
+```
+afterEach(()=>{
+    cleanup();
+    console.error.mockClear()
+})
+```
