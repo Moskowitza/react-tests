@@ -23,3 +23,7 @@ Other example tests from a _counter_ like component
 Integration test to see if form comes in with parent
 `expect(queryByTestId('movie-form')).toBeTruthy()`
 using `queryByTestId` instead of `getByTestId` if you're not sure it will be there
+
+### Snapshot testing
+
+use `container`
