@@ -1,4 +1,6 @@
 #Testing with @testing-library/react
+This Repo is based on the [levelUpTut](https://www.leveluptutorials.com) on react testing
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Testing Packages
@@ -9,14 +11,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - React-Testing-Library fully renders child components, unlike enzyme which "shallow renders".
 
-### Counter
+### Counter & Incrementor
 
 `fireEvent` to check on click
 `afterEach(cleanup)` To run more than one test we need to remove the component from the dom
 
-### Incrementor
-
 Other example tests from a _counter_ like component
+
+## Real World Components
 
 ### NewMovie
 
@@ -91,4 +93,12 @@ afterEach(()=>{
     cleanup();
     console.error.mockClear()
 })
+```
+
+## Testing details
+
+When we pass info to a component we should check that the information is recieved correctly. Assert that the expected attributes are _toBe_ what you expect
+
+```
+expect(getByTestId('movie-link').getAttribute('href')).toBe(`/${movie.id}`)
 ```

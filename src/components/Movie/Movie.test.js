@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import Movie from './Movie.js';
+import Movie, {POSTER_PATH} from './Movie.js';
 import {MemoryRouter} from 'react-router-dom';
 
 afterEach(()=>{
@@ -13,7 +13,7 @@ console.error=jest.fn();
 const movie={
     id:'1',
     title: "A Clockwork Orange",
-    poster_path:"aclockworkorange.jpg"        
+    poster_path:"kgAi87gyx6b4oGJYSC36tVkJyJu.jpg"        
 }
 
 test('<Movie>',()=>{
@@ -22,11 +22,14 @@ test('<Movie>',()=>{
 })
 test('<Movie /> with movie',()=>{
     
-    render(
+    const {getByTestId} =render(
         <MemoryRouter>
             <Movie movie={movie}/>
         </MemoryRouter>
         );
-
+ 
     expect(console.error).not.toHaveBeenCalled()
+    expect(getByTestId('movie-link').getAttribute('href')).toBe(`/${movie.id}`)
+    expect(getByTestId('movie-img').src).toBe(`${POSTER_PATH}${movie.id}`)
+
 })
