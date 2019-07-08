@@ -4,7 +4,7 @@ import Incrementor from './Incrementor.js'
 
 test('<Incrementor />',()=>{
     const {debug, getByTestId}=render(<Incrementor/>);
-    debug();
+    // debug();
     // Assert button is button
     expect(getByTestId('incrementor-button').tagName).toBe("BUTTON");
     // Assert incrementor starts at 0

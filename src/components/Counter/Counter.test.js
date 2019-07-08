@@ -6,12 +6,12 @@ afterEach(cleanup)
 
 test('<Counter />',()=>{
     const {debug, getByTestId}=render(<Counter/>);
-    debug();
+    // debug();
     const counterButton=getByTestId('counter-button')
     expect(counterButton.tagName).toBe("BUTTON");
     // Assert incrementor starts at 0
     expect(counterButton.textContent).toBe("0");
     fireEvent.click(counterButton)
     expect(counterButton.textContent).toBe("1");
-    debug();
+    // debug();
 });

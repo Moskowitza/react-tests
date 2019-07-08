@@ -7,9 +7,10 @@ afterEach(cleanup)
 test('<NewMovie/>',()=>{
     const {debug, getByTestId, queryByTestId, container} = render(<NewMovie/>)
     expect(getByTestId('page-title').textContent).toBe("New Movie")
-    expect(queryByTestId('movie-form')).toBeTruthy()
+    expect(queryByTestId('movie-form')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
     // debug();
-    console.log(container)
+    // console.log(container.firstChild)
 })
 
 // if you render more than once, use cleanup in afterEach
