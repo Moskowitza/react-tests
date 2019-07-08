@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Overdrive from 'react-overdrive';
 import { Poster } from '../Movie/Movie';
+import {apiKey} from '../../keys/apiKeys'
 
 export const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 export const BACKDROP_PATH = 'http://image.tmdb.org/t/p/w1280';
@@ -16,7 +17,7 @@ class MovieDetail extends Component {
       const res = await fetch(
         `https://api.themoviedb.org/3/movie/${
           this.props.match.params.id
-        }?api_key=hi&language=en-US`,
+        }?api_key=${apiKey}&language=en-US`,
       );
       const movie = await res.json();
       this.setState({

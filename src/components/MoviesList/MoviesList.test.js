@@ -42,21 +42,20 @@ test('<MoviesList /> with Details', async () =>{
         const { getByTestId, getAllByTestId, queryByTestId} =render(<MemoryRouter><MoviesList/></MemoryRouter>);
         expect(queryByTestId("loading")).toBeTruthy()
         const [movieLink, movieImg]= await waitForElement(()=> 
-        [getAllByTestId('movie-link'),
-         getAllByTestId('movie-img')]
+        [ getAllByTestId('movie-link'),
+          getAllByTestId('movie-img')]
         )
         expect(queryByTestId("loading")).toBeFalsy()
         expect(movieLink[0].getAttribute('href')).toBe(`/${movies.results[0].id}`)
         expect(movieImg[0].src).toBe(`${POSTER_PATH}/${movies.results[0].poster_path}`)
-
 })
 
-test('<MoviesList /> check for all', async () =>{
-    fetch.mockResponseOnce(JSON.stringify(movies))
-        const { getByTestId,queryByTestId,getAllByTestId} =render(<MemoryRouter><MoviesList/></MemoryRouter>);
-        expect(getByTestId("loading")).toBeTruthy()
-        await waitForElement(() => getAllByTestId('movie-link'))
-        expect(queryByTestId("loading")).toBeFalsy()
-        expect(getAllByTestId('movie-link').length).toBe(movies.results.length)
+// test('<MoviesList /> check for all', async () =>{
+//     fetch.mockResponseOnce(JSON.stringify(movies))
+//         const { getByTestId,queryByTestId,getAllByTestId} =render(<MemoryRouter><MoviesList/></MemoryRouter>);
+//         expect(getByTestId("loading")).toBeTruthy()
+//         await waitForElement(() => getAllByTestId('movie-link'))
+//         expect(queryByTestId("loading")).toBeFalsy()
+//         expect(getAllByTestId('movie-link').length).toBe(movies.results.length)
 
-})
+// })
