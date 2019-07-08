@@ -26,4 +26,12 @@ using `queryByTestId` instead of `getByTestId` if you're not sure it will be the
 
 ### Snapshot testing
 
-use `container`
+we use the method `.toMatchSnapshot()` on the assertion of a visual dom element
+use `container` to find what you want the snapshot to be of.
+
+### Using a Spy
+
+use `const onSubmit=jest.fn();` to create a spy function to see if it was clicked
+We can then check on our spy function
+`fireEvent.click(getByText('Submit'))`
+`expect(onSubmit).toHaveBeenCalledTimes(1);`
