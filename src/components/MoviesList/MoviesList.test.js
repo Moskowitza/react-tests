@@ -13,6 +13,7 @@ afterEach(()=>{
 console.error=jest.fn();
 
 const movies={
+    success:true,
     results:[{
     id:'1',
     title: 'A Clockwork Orange',
