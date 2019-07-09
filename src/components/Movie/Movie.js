@@ -9,7 +9,7 @@ export const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 const Movie = ({ movie }) => {
   if (!movie) return null;
   return (
-    <Link to={`${process.env.PUBLIC_URL}/${movie.id}`} data-testid="movie-link">
+    <Link to={`/${movie.id}`} data-testid="movie-link">
       <Overdrive id={`${movie.id}`}>
         <Poster src={`${POSTER_PATH}/${movie.poster_path}`} alt={movie.title} data-testid="movie-img"/>
       </Overdrive>
