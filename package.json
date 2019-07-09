@@ -2,7 +2,7 @@
   "name": "react-tests",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://moskowitza.github.io/react-tests",
+  "homepage": "https://moskowitza.github.io/react-tests/",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

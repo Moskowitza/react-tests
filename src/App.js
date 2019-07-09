@@ -10,8 +10,8 @@ const App = () => (
   <Router basename={'/react-tests'}>
     <div className="App">
       <Switch>
-        <Route exact path={`${process.env.PUBLIC_URL}/`} component={MoviesList} />
-        <Route path={`${process.env.PUBLIC_URL}/:id`} component={MovieDetail} />
+        <Route exact path={`/`} component={MoviesList} />
+        <Route path={`/:id`} component={MovieDetail} />
       </Switch>
     </div>
   </Router>
