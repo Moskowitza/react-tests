@@ -3,6 +3,8 @@ This Repo is based on the [levelUpTut](https://www.leveluptutorials.com) on reac
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[Deployed Site](http://moskowitza.github.io/react-testing)
+
 ## Testing Packages
 
 - jest comes with CRA, and scans the folder looking for test.js files
