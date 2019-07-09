@@ -11,7 +11,7 @@ afterEach(()=>{
 console.error=jest.fn();
 
 const movie={
-    id:'1',
+    id:1,
     title: "A Clockwork Orange",
     poster_path:"kgAi87gyx6b4oGJYSC36tVkJyJu.jpg"        
 }

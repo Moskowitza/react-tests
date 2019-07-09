@@ -7,11 +7,11 @@ import MoviesList from './components/MoviesList/MoviesList';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 
 const App = () => (
-  <Router>
+  <Router basename={'/react-tests'}>
     <div className="App">
       <Switch>
-        <Route exact path="/" component={MoviesList} />
-        <Route path="/:id" component={MovieDetail} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={MoviesList} />
+        <Route path={`${process.env.PUBLIC_URL}/:id`} component={MovieDetail} />
       </Switch>
     </div>
   </Router>
