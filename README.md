@@ -3,7 +3,7 @@ This Repo is based on the [levelUpTut](https://www.leveluptutorials.com) on reac
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Deployed Site](http://moskowitza.github.io/react-testing)
+_May not work_ [Deployed to gh-pages ](http://moskowitza.github.io/react-tests)
 
 ## Testing Packages
 
