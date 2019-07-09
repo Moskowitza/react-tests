@@ -2,6 +2,7 @@
   "name": "react-testing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://moskowitza.github.io/react-testing",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.4",
+    "gh-pages": "^2.0.1",
     "jest-dom": "^3.5.0",
     "jest-fetch-mock": "^2.1.2"
   }
